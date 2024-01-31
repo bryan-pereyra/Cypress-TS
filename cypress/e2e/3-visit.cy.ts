@@ -1,5 +1,10 @@
 describe('basics', () => {
-    it('visit explanation', () => {
+
+    beforeEach(()=>{
         cy.visit('/textinput');
+    });
+
+    it('visit explanation', () => {
+        cy.log('Hello from the .it');
     });
 });

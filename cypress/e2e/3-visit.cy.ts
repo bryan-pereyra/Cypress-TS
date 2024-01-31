@@ -5,6 +5,8 @@ describe('basics', () => {
     });
 
     it('visit explanation', () => {
-        cy.log('Hello from the .it');
+        cy.url().then((url)=>{
+            cy.log(`Printing the URL: ${url}`);
+        });
     });
 });

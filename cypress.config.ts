@@ -13,4 +13,6 @@ export default defineConfig({
       Angular: "https://www.globalsqa.com/",
     },
   },
+  viewportHeight: 1000,
+  viewportWidth: 1400,
 });

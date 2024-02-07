@@ -8,9 +8,9 @@ export default defineConfig({
     },
     env: {
       demoVar: "Hello from the cypress.config.ts file",
-      demoQA: "https://demoqa.com/",
-      theInternet: "https://the-internet.herokuapp.com/",
-      Angular: "https://www.globalsqa.com/",
+      demoQA: "https://demoqa.com",
+      theInternet: "https://the-internet.herokuapp.com",
+      Angular: "https://www.globalsqa.com",
     },
   },
   viewportHeight: 1000,

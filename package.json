@@ -15,6 +15,7 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^13.6.4",
+    "cypress-file-upload": "^5.0.8",
     "cypress-real-events": "^1.11.0",
     "typescript": "^5.3.3"
   },

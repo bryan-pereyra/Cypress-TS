@@ -12,7 +12,8 @@
 // You can read more here:
 // https://on.cypress.io/configuration
 // ***********************************************************
-require('@cypress/xpath/src')
+require('@cypress/xpath/src');
+require('cy-verify-downloads').addCustomCommand();
 // Import commands.js using ES2015 syntax:
 import './commands';
 import './exceptions';

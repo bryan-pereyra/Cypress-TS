@@ -1,5 +1,6 @@
 import 'cypress-file-upload';
-import '@testing-library/cypress/add-commands'
+import '@testing-library/cypress/add-commands';
+import '@4tw/cypress-drag-drop';
 /// <reference types="cypress" />
 /// <reference types="@cypress/xpath" />
 // ***********************************************

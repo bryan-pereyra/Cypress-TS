@@ -21,3 +21,11 @@ import "cypress-real-events";
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+beforeEach(() => {
+    cy.log("Hello I am a GLOBAL 'beforeEach' Hook");
+});
+
+afterEach(() => {
+    cy.log("Hello I am a GLOBAL 'afterEach' Hook");
+});

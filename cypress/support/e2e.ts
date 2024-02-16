@@ -24,8 +24,21 @@ import "cypress-real-events";
 
 beforeEach(() => {
     cy.log("Hello I am a GLOBAL 'beforeEach' Hook");
+
+    cy.session('mySession', () => {
+        cy.visit(`${Cypress.env('demoQA')}/login`);
+        cy.get('input#userName').type('test');
+        cy.get('input#password').type('Test1234*');
+        cy.get('button#login').click();
+        cy.url().should('contain', 'profile');
+    });
 });
 
-afterEach(() => {
+after(() => {
     cy.log("Hello I am a GLOBAL 'afterEach' Hook");
+    cy.clearCookies();
+    cy.getCookies().then((cookies) => {
+        cy.log('Cookies: ', cookies);
+        expect(cookies).to.have.length(0);
+    });
 });

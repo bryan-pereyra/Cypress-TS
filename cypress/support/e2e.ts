@@ -22,23 +22,23 @@ import "cypress-real-events";
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-beforeEach(() => {
-    cy.log("Hello I am a GLOBAL 'beforeEach' Hook");
+// beforeEach(() => {
+//     cy.log("Hello I am a GLOBAL 'beforeEach' Hook");
 
-    cy.session('mySession', () => {
-        cy.visit(`${Cypress.env('demoQA')}/login`);
-        cy.get('input#userName').type('test');
-        cy.get('input#password').type('Test1234*');
-        cy.get('button#login').click();
-        cy.url().should('contain', 'profile');
-    });
-});
+//     cy.session('mySession', () => {
+//         cy.visit(`${Cypress.env('demoQA')}/login`);
+//         cy.get('input#userName').type('test');
+//         cy.get('input#password').type('Test1234*');
+//         cy.get('button#login').click();
+//         cy.url().should('contain', 'profile');
+//     });
+// });
 
-after(() => {
-    cy.log("Hello I am a GLOBAL 'afterEach' Hook");
-    cy.clearCookies();
-    cy.getCookies().then((cookies) => {
-        cy.log('Cookies: ', cookies);
-        expect(cookies).to.have.length(0);
-    });
-});
+// after(() => {
+//     cy.log("Hello I am a GLOBAL 'afterEach' Hook");
+//     cy.clearCookies();
+//     cy.getCookies().then((cookies) => {
+//         cy.log('Cookies: ', cookies);
+//         expect(cookies).to.have.length(0);
+//     });
+// });

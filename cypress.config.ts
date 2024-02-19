@@ -8,6 +8,7 @@ export default defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
       on('task', verifyDownloadTasks);
+      require('cypress-mochawesome-reporter/plugin')(on);
     },
     env: {
       demoVar: "Hello from the cypress.config.ts file",
@@ -18,4 +19,13 @@ export default defineConfig({
   },
   viewportHeight: 1000,
   viewportWidth: 1400,
+  reporter: 'cypress-mochawesome-reporter',
+  reporterOptions: {
+    charts: true,
+    reportPageTitle: 'Udemy Course Report',
+    embeddedScreenshots: true,
+    inlineAssets: true,
+    saveAllAttempts: false,
+    quiet: true,
+  },
 });

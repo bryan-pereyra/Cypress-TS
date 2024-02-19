@@ -28,4 +28,8 @@ export default defineConfig({
     saveAllAttempts: false,
     quiet: true,
   },
+  retries: {
+    runMode: 2,
+    openMode: 1,
+  }
 });

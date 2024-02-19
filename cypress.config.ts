@@ -31,5 +31,7 @@ export default defineConfig({
   retries: {
     runMode: 2,
     openMode: 1,
-  }
+  },
+  video: true,
+  screenshotOnRunFailure: true,
 });

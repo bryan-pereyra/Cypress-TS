@@ -4,7 +4,10 @@
   "description": "Cypress Course using Typescript",
   "main": "index.js",
   "scripts": {
-    "runner": "cypress open --e2e --browser chrome --config baseUrl=http://uitestingplayground.com --env demoVar=Hello_From_package.json_file"
+    "runner": "cypress open --e2e --browser chrome --config baseUrl=http://uitestingplayground.com --env demoVar=Hello_From_package.json_file",
+    "cypress-run": "cypress run --browser edge --spec cypress/e2e/26-customCommands.cy.ts",
+    "cypress-i": "cypress info",
+    "cypress-v": "cypress version"
   },
   "keywords": [
     "cypress",

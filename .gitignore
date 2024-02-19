@@ -1,0 +1,9 @@
+### CypressIO ###
+cypress/results/*
+cypress/reports/*
+cypress/screenshots/*
+cypress/videos/*
+cypress/downloads/*
+
+### Node ###
+node_modules/
